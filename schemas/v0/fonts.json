@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "fonts.json",
+  "title": "Open Matchday theme font license registry v0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["themes_version", "entries"],
+  "properties": {
+    "themes_version": {
+      "$ref": "common.json#/$defs/ThemesVersion"
+    },
+    "entries": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["family", "source", "spdx_license_id", "license_url"],
+        "properties": {
+          "family": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128
+          },
+          "source": {
+            "type": "string",
+            "enum": ["css_generic", "file"],
+            "description": "css_generic = CSS Fonts Module generic family; file = packaged font with license"
+          },
+          "spdx_license_id": {
+            "$ref": "common.json#/$defs/SpdxLicenseId"
+          },
+          "license_url": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 512,
+            "format": "uri"
+          },
+          "notes": {
+            "type": "string",
+            "maxLength": 1024
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "manifest.json",
+  "title": "Open Matchday theme package manifest v0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "themes_version",
+    "id",
+    "version",
+    "title",
+    "token_contract_version",
+    "aspects",
+    "fiction"
+  ],
+  "properties": {
+    "themes_version": {
+      "$ref": "common.json#/$defs/ThemesVersion"
+    },
+    "id": {
+      "$ref": "common.json#/$defs/Id"
+    },
+    "version": {
+      "$ref": "common.json#/$defs/SemVer"
+    },
+    "title": {
+      "$ref": "common.json#/$defs/NonEmptyString"
+    },
+    "description": {
+      "type": "string",
+      "maxLength": 1024
+    },
+    "token_contract_version": {
+      "type": "string",
+      "const": "0.1.0",
+      "description": "Pinned graphics theme-token contract version"
+    },
+    "aspects": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "uniqueItems": true,
+      "items": {
+        "$ref": "common.json#/$defs/AspectRatio"
+      },
+      "description": "Must include all AC-8.1 aspects: 16:9, 9:16, 1:1"
+    },
+    "fiction": {
+      "type": "boolean",
+      "description": "True when sample brand/names are fictional"
+    },
+    "default_locale": {
+      "type": "string",
+      "minLength": 2,
+      "maxLength": 16,
+      "default": "en"
+    }
+  }
+}

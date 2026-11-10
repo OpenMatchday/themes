@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "colors.json",
+  "title": "Open Matchday theme colors v0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["themes_version", "colors", "contrast_pairs"],
+  "properties": {
+    "themes_version": {
+      "$ref": "common.json#/$defs/ThemesVersion"
+    },
+    "colors": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {
+        "$ref": "common.json#/$defs/HexColor"
+      },
+      "propertyNames": {
+        "$ref": "common.json#/$defs/TokenKey"
+      }
+    },
+    "contrast_pairs": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["fg", "bg", "min_ratio"],
+        "properties": {
+          "fg": {
+            "$ref": "common.json#/$defs/TokenKey"
+          },
+          "bg": {
+            "$ref": "common.json#/$defs/TokenKey"
+          },
+          "min_ratio": {
+            "type": "number",
+            "enum": [3, 4.5],
+            "description": "WCAG 2.2 SC 1.4.3: 4.5 normal text, 3 large text"
+          },
+          "large_text": {
+            "type": "boolean",
+            "default": false
+          }
+        }
+      }
+    }
+  }
+}

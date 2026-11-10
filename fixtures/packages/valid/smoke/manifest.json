@@ -1,0 +1,11 @@
+{
+  "themes_version": "0.1.0",
+  "id": "smoke",
+  "version": "0.1.0",
+  "title": "Smoke Theme",
+  "description": "Validation fixture theme (fictional).",
+  "token_contract_version": "0.1.0",
+  "aspects": ["16:9", "9:16", "1:1"],
+  "fiction": true,
+  "default_locale": "en"
+}

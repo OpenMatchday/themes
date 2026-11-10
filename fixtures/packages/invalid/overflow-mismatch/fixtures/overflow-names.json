@@ -1,0 +1,15 @@
+{
+  "kind": "overflow_names",
+  "names": [
+    {
+      "id": "long_ascii",
+      "text": "Northside United Community Athletic Association Reserve",
+      "expects_overflow": false
+    },
+    {
+      "id": "non_ascii_long",
+      "text": "東京バスケットボールクラブ延長名称テスト代表チーム連合",
+      "expects_overflow": false
+    }
+  ]
+}

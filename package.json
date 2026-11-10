@@ -1,0 +1,23 @@
+{
+  "name": "open-matchday-themes",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Open Matchday declarative theme packages and validation",
+  "scripts": {
+    "check": "node scripts/check-schemas.mjs",
+    "validate": "node scripts/validate-packages.mjs",
+    "test": "node --test test/schema.test.mjs test/contrast.test.mjs test/packages.test.mjs test/import-export.test.mjs",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "export": "node scripts/export-theme.mjs",
+    "import": "node scripts/import-theme.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "devDependencies": {
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
+    "typescript": "^5.9.3"
+  }
+}

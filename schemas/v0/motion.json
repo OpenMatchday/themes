@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "motion.json",
+  "title": "Open Matchday theme motion intensity v0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["themes_version", "intensity", "reduced_motion_default"],
+  "properties": {
+    "themes_version": {
+      "$ref": "common.json#/$defs/ThemesVersion"
+    },
+    "intensity": {
+      "type": "string",
+      "enum": ["none", "reduced", "full"],
+      "description": "Declarative motion intensity preference for graphics"
+    },
+    "reduced_motion_default": {
+      "type": "boolean",
+      "description": "When true, renderer should prefer reduced motion bindings"
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "typography.json",
+  "title": "Open Matchday theme typography v0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["themes_version", "families", "overflow"],
+  "properties": {
+    "themes_version": {
+      "$ref": "common.json#/$defs/ThemesVersion"
+    },
+    "families": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["stack", "font_entry"],
+        "properties": {
+          "stack": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 256
+          },
+          "font_entry": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 64,
+            "description": "Key into fonts.json entries"
+          }
+        }
+      },
+      "propertyNames": {
+        "$ref": "common.json#/$defs/TokenKey"
+      }
+    },
+    "overflow": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["strategy", "max_name_codepoints", "avg_glyph_em"],
+      "properties": {
+        "strategy": {
+          "type": "string",
+          "enum": ["ellipsis", "shrink", "wrap"],
+          "description": "How long or non-ASCII names are handled when they exceed slot width"
+        },
+        "max_name_codepoints": {
+          "type": "integer",
+          "minimum": 8,
+          "maximum": 256,
+          "description": "Declared max length for team/player name slots"
+        },
+        "avg_glyph_em": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "maximum": 1,
+          "description": "Average advance width in em for overflow estimates"
+        }
+      }
+    }
+  }
+}

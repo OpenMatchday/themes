@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "common.json",
+  "title": "Open Matchday themes common types v0",
+  "description": "Shared primitives for declarative theme packages. No executable logic.",
+  "$defs": {
+    "ThemesVersion": {
+      "type": "string",
+      "const": "0.1.0",
+      "description": "SemVer for themes schemas and validator (REPOS.md)."
+    },
+    "NonEmptyString": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 256
+    },
+    "Id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 64,
+      "pattern": "^[a-z][a-z0-9_-]*$"
+    },
+    "SemVer": {
+      "type": "string",
+      "pattern": "^(0|[1-9]\\d*)\\.(0|[1-9]\\d*)\\.(0|[1-9]\\d*)(?:-[0-9A-Za-z-]+(?:\\.[0-9A-Za-z-]+)*)?(?:\\+[0-9A-Za-z-]+(?:\\.[0-9A-Za-z-]+)*)?$"
+    },
+    "HexColor": {
+      "type": "string",
+      "pattern": "^#[0-9A-Fa-f]{6}$",
+      "description": "sRGB hex #RRGGBB for WCAG relative luminance"
+    },
+    "TokenKey": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 64,
+      "pattern": "^[a-z][a-z0-9_.]*$",
+      "description": "Matches graphics TokenRef pattern"
+    },
+    "AspectRatio": {
+      "type": "string",
+      "enum": ["16:9", "9:16", "1:1"]
+    },
+    "SpdxLicenseId": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 128,
+      "description": "SPDX license identifier or CSS-generic marker"
+    }
+  }
+}

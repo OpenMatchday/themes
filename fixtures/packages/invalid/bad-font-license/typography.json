@@ -1,0 +1,14 @@
+{
+  "themes_version": "0.1.0",
+  "families": {
+    "font.family": {
+      "stack": "sans-serif",
+      "font_entry": "generic-sans"
+    }
+  },
+  "overflow": {
+    "strategy": "ellipsis",
+    "max_name_codepoints": 24,
+    "avg_glyph_em": 0.55
+  }
+}

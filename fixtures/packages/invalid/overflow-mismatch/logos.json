@@ -1,0 +1,26 @@
+{
+  "themes_version": "0.1.0",
+  "slots": [
+    {
+      "slot_id": "home_logo",
+      "label": "Home team logo",
+      "max_width_px": 256,
+      "max_height_px": 256,
+      "required": false
+    },
+    {
+      "slot_id": "away_logo",
+      "label": "Away team logo",
+      "max_width_px": 256,
+      "max_height_px": 256,
+      "required": false
+    },
+    {
+      "slot_id": "sponsor",
+      "label": "Sponsor mark",
+      "max_width_px": 512,
+      "max_height_px": 128,
+      "required": false
+    }
+  ]
+}

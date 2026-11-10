@@ -1,0 +1,25 @@
+{
+  "kind": "overflow_names",
+  "names": [
+    {
+      "id": "short_ascii",
+      "text": "Rivers FC",
+      "expects_overflow": false
+    },
+    {
+      "id": "long_ascii",
+      "text": "Northside United Community Athletic Association Reserve",
+      "expects_overflow": true
+    },
+    {
+      "id": "non_ascii_long",
+      "text": "東京バスケットボールクラブ延長名称テスト代表チーム連合",
+      "expects_overflow": true
+    },
+    {
+      "id": "non_ascii_short",
+      "text": "東京FC",
+      "expects_overflow": false
+    }
+  ]
+}

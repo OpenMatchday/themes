@@ -1,0 +1,12 @@
+{
+  "themes_version": "0.1.0",
+  "entries": {
+    "generic-sans": {
+      "family": "sans-serif",
+      "source": "css_generic",
+      "spdx_license_id": "LicenseRef-CSS-generic-font-family",
+      "license_url": "https://www.w3.org/TR/css-fonts-4/#generic-font-families",
+      "notes": "No font binary shipped. CSS Fonts Module Level 4 generic family sans-serif; user agent maps to a local face."
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "themes_version": "0.1.0",
+  "entries": {
+    "generic-sans": {
+      "family": "sans-serif",
+      "source": "css_generic",
+      "spdx_license_id": "MIT",
+      "license_url": "https://www.w3.org/TR/css-fonts-4/#generic-font-families",
+      "notes": "Intentionally wrong SPDX for css_generic to fail validation"
+    }
+  }
+}

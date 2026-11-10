@@ -1,0 +1,41 @@
+{
+  "schema_version": "0.1.0",
+  "dialect": "https://json-schema.org/draft/2020-12/schema",
+  "schemas": [
+    "common.json",
+    "manifest.json",
+    "colors.json",
+    "typography.json",
+    "logos.json",
+    "tokens.json",
+    "motion.json",
+    "fonts.json"
+  ],
+  "package_file_schemas": {
+    "manifest.json": "manifest.json",
+    "colors.json": "colors.json",
+    "typography.json": "typography.json",
+    "logos.json": "logos.json",
+    "tokens.json": "tokens.json",
+    "motion.json": "motion.json",
+    "fonts.json": "fonts.json"
+  },
+  "required_layout": [
+    "manifest.json",
+    "colors.json",
+    "typography.json",
+    "logos.json",
+    "tokens.json",
+    "motion.json",
+    "fonts.json",
+    "docs/",
+    "fixtures/"
+  ],
+  "sources": {
+    "json_schema": "https://json-schema.org/draft/2020-12/schema",
+    "semver": "https://semver.org/",
+    "wcag_contrast": "https://www.w3.org/TR/WCAG22/#contrast-minimum",
+    "css_fonts_generic": "https://www.w3.org/TR/css-fonts-4/#generic-font-families",
+    "ac": "PROJECT_SPEC AC-8.2 AC-8.3 AC-8.4"
+  }
+}

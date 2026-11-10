@@ -1,0 +1,22 @@
+{
+  "themes_version": "0.1.0",
+  "colors": {
+    "color.panel": "#EEEEEE",
+    "color.accent": "#DDDDDD",
+    "color.text": "#CCCCCC"
+  },
+  "contrast_pairs": [
+    {
+      "fg": "color.text",
+      "bg": "color.panel",
+      "min_ratio": 4.5,
+      "large_text": false
+    },
+    {
+      "fg": "color.text",
+      "bg": "color.accent",
+      "min_ratio": 4.5,
+      "large_text": false
+    }
+  ]
+}
