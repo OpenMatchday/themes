@@ -21,10 +21,13 @@ Themes SemVer is `0.1.0` (`VERSION`, `package.json`). Token contract pin `0.1.0`
 npm ci
 npm run check
 npm run validate
+npm run catalog
 npm test
 npm run typecheck
 npm run export -- packages/matchday-neutral
 ```
+
+`npm run catalog` writes `dist/website-catalog.v0.json` for the website theme catalog sync.
 
 ## Docs
 

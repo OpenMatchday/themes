@@ -7,7 +7,8 @@
   "scripts": {
     "check": "node scripts/check-schemas.mjs",
     "validate": "node scripts/validate-packages.mjs",
-    "test": "node --test test/schema.test.mjs test/contrast.test.mjs test/packages.test.mjs test/import-export.test.mjs",
+    "catalog": "node scripts/export-website-catalog.mjs",
+    "test": "node --test test/schema.test.mjs test/contrast.test.mjs test/packages.test.mjs test/import-export.test.mjs test/website-catalog.test.mjs",
     "typecheck": "tsc --noEmit -p tsconfig.json",
     "export": "node scripts/export-theme.mjs",
     "import": "node scripts/import-theme.mjs"
